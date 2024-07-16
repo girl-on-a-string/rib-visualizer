@@ -12,19 +12,31 @@ const stitchContainer = document.getElementById("visual");
 
 //create stitches
 
+function createStitches () {
+    const canvas = document.createElement("canvas");
+    stitchContainer.appendChild(canvas);
 
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "LightSteelBlue";
+}
 
 //create display
 
 function createVisual () {
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+    })
+
     if (stsCountInput > 0 && ribWidthInput > 0) {
         for (let i = 0; i < stsCountInput; i++) {
-            let stitch = document.createElement("div");
+            // let stitch = document.createElement("div");
+            createStitches();
         }
         console.log(true);
     } else if (ribWidthInput > stsCountInput) {
         alert("Your rib width can't be greater than the stitch count");
-    } else {
+        console.log(false);
+    } else if (stsCountInput === 0 || ribWidthInput === 0) {
         alert("You need to input a value greater than 0 for one or both of your stitch counts");
         console.log(false);
     }
