@@ -6,3 +6,23 @@ body {
 #container {
     text-align: center;
 }
+
+/* multiples */
+
+#stitch-count, #rib-width {
+    margin: 5px;
+}
+
+/* create */
+
+/* sts count div */
+
+
+
+/* rib width div */
+
+/* button */
+
+#submit {
+    margin: 10px;
+}
