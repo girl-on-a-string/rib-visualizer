@@ -12,7 +12,14 @@
         <h2>Visualize your knit or crochet ribbing and make sure you don't end up with a doubled rib!</h2>
         <div id="interface">
             <form id="create">
-                <input id="input" type="number">
+                <div id="stitch-count">
+                    <span>Stitch Count:</span>
+                    <input id="sts-ct" type="number" min="0">
+                </div>
+                <div id="rib-width">
+                    <span>Rib Width:</span>
+                    <input id="rib-wdth" type="number" min="0">
+                </div>
                 <button id="submit" type="submit">Create Visual</button>
             </form>
             <div id="visual">
